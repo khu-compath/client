@@ -3,6 +3,7 @@ patch:
   path: "src/components/index.ts"
   append: "export * from \"./<%= props.subdirectory %><%= props.pascalCaseName %>\"\n"
   skip: <%= props.skipIndexFile %>
+destinationDir: src/components
 ---
 import * as React from "react"
 import { StyleProp, TextStyle, View, ViewStyle } from "react-native"
