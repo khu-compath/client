@@ -45,12 +45,12 @@ export default function DemoDebugScreen() {
         tx="demoDebugScreen.reportBugs"
         onPress={() => openLinkInBrowser("https://github.com/infinitered/ignite/issues")}
       />
-      <Text style={$title} preset="heading" tx="demoDebugScreen.title" />
+      <Text style={$title} preset="c1" tx="demoDebugScreen.title" />
       <View style={$itemsContainer}>
         <ListItem
           LeftComponent={
             <View style={$item}>
-              <Text preset="bold">App Id</Text>
+              <Text preset="c3">App Id</Text>
               <Text>{Application.applicationId}</Text>
             </View>
           }
@@ -58,7 +58,7 @@ export default function DemoDebugScreen() {
         <ListItem
           LeftComponent={
             <View style={$item}>
-              <Text preset="bold">App Name</Text>
+              <Text preset="c3">App Name</Text>
               <Text>{Application.applicationName}</Text>
             </View>
           }
@@ -66,7 +66,7 @@ export default function DemoDebugScreen() {
         <ListItem
           LeftComponent={
             <View style={$item}>
-              <Text preset="bold">App Version</Text>
+              <Text preset="c3">App Version</Text>
               <Text>{Application.nativeApplicationVersion}</Text>
             </View>
           }
@@ -74,7 +74,7 @@ export default function DemoDebugScreen() {
         <ListItem
           LeftComponent={
             <View style={$item}>
-              <Text preset="bold">App Build Version</Text>
+              <Text preset="c3">App Build Version</Text>
               <Text>{Application.nativeBuildVersion}</Text>
             </View>
           }
@@ -82,7 +82,7 @@ export default function DemoDebugScreen() {
         <ListItem
           LeftComponent={
             <View style={$item}>
-              <Text preset="bold">Hermes Enabled</Text>
+              <Text preset="c3">Hermes Enabled</Text>
               <Text>{String(usingHermes)}</Text>
             </View>
           }
@@ -90,7 +90,7 @@ export default function DemoDebugScreen() {
         <ListItem
           LeftComponent={
             <View style={$item}>
-              <Text preset="bold">Fabric Enabled</Text>
+              <Text preset="c3">Fabric Enabled</Text>
               <Text>{String(usingFabric)}</Text>
             </View>
           }

@@ -11,7 +11,13 @@ export default observer(function InfoUserScreen() {
 
   return (
     <Screen preset="fixed" style={$root} safeAreaEdges={["top"]}>
-      <Text text="infoUser" />
+      <Text preset="c1" text="당신이 몰랐던 캠퍼스 라이프" />
+      <Text preset="c2" text="당신이 몰랐던 캠퍼스 라이프" />
+      <Text preset="c3" text="당신이 몰랐던 캠퍼스 라이프" />
+      <Text preset="c4" text="당신이 몰랐던 캠퍼스 라이프" />
+      <Text preset="c5" text="당신이 몰랐던 캠퍼스 라이프" />
+      <Text preset="c6" text="당신이 몰랐던 캠퍼스 라이프" />
+      <Text preset="c7" text="당신이 몰랐던 캠퍼스 라이프" />
     </Screen>
   )
 })

@@ -58,14 +58,14 @@ export const DemoText: Demo = {
     </DemoUseCase>,
 
     <DemoUseCase name="Weights" description="There's a weight prop.">
-      <Text weight="light">
+      <Text weight="regular">
         light - Nulla magna incididunt excepteur est occaecat duis culpa dolore cupidatat enim et.
       </Text>
 
       <DemoDivider />
 
-      <Text weight="normal">
-        normal - Magna incididunt dolor ut veniam veniam laboris aliqua velit ea incididunt.
+      <Text weight="regular">
+        regular - Magna incididunt dolor ut veniam veniam laboris aliqua velit ea incididunt.
       </Text>
 
       <DemoDivider />

@@ -51,13 +51,13 @@ export interface TextProps extends RNTextProps {
  * @param {TextProps} props - The props for the `Text` component.
  * @returns {JSX.Element} The rendered `Text` component.
  */
-export function Text(props: TextProps) {
+export function Text(props: TextProps): JSX.Element {
   const { weight, size, tx, txOptions, text, children, style: $styleOverride, ...rest } = props
 
   const i18nText = tx && translate(tx, txOptions)
   const content = i18nText || text || children
 
-  const preset: Presets = props.preset ?? "default"
+  const preset: Presets = props.preset ?? "c5"
   const $styles: StyleProp<TextStyle> = [
     $rtlStyle,
     $presets[preset],
@@ -74,13 +74,10 @@ export function Text(props: TextProps) {
 }
 
 const $sizeStyles = {
-  xxl: { fontSize: 36, lineHeight: 44 } satisfies TextStyle,
-  xl: { fontSize: 24, lineHeight: 34 } satisfies TextStyle,
-  lg: { fontSize: 20, lineHeight: 32 } satisfies TextStyle,
-  md: { fontSize: 18, lineHeight: 26 } satisfies TextStyle,
-  sm: { fontSize: 16, lineHeight: 24 } satisfies TextStyle,
-  xs: { fontSize: 14, lineHeight: 21 } satisfies TextStyle,
-  xxs: { fontSize: 12, lineHeight: 18 } satisfies TextStyle,
+  xl: { fontSize: 25, lineHeight: 30, letterSpacing: -1 } satisfies TextStyle,
+  lg: { fontSize: 20, lineHeight: 25, letterSpacing: 0 } satisfies TextStyle,
+  md: { fontSize: 18, lineHeight: 23, letterSpacing: 0 } satisfies TextStyle,
+  sm: { fontSize: 15, lineHeight: 18, letterSpacing: 0 } satisfies TextStyle,
 }
 
 const $fontWeightStyles = Object.entries(typography.primary).reduce((acc, [weight, fontFamily]) => {
@@ -89,22 +86,24 @@ const $fontWeightStyles = Object.entries(typography.primary).reduce((acc, [weigh
 
 const $baseStyle: StyleProp<TextStyle> = [
   $sizeStyles.sm,
-  $fontWeightStyles.normal,
+  $fontWeightStyles.regular,
   { color: colors.text },
 ]
 
 const $presets = {
-  default: $baseStyle,
+  c1: [$baseStyle, $sizeStyles.xl, $fontWeightStyles.bold] as StyleProp<TextStyle>,
 
-  bold: [$baseStyle, $fontWeightStyles.bold] as StyleProp<TextStyle>,
+  c2: [$baseStyle, $sizeStyles.lg, $fontWeightStyles.semiBold] as StyleProp<TextStyle>,
 
-  heading: [$baseStyle, $sizeStyles.xxl, $fontWeightStyles.bold] as StyleProp<TextStyle>,
+  c3: [$baseStyle, $sizeStyles.md, $fontWeightStyles.semiBold] as StyleProp<TextStyle>,
 
-  subheading: [$baseStyle, $sizeStyles.lg, $fontWeightStyles.medium] as StyleProp<TextStyle>,
+  c4: [$baseStyle, $sizeStyles.sm, $fontWeightStyles.semiBold] as StyleProp<TextStyle>,
 
-  formLabel: [$baseStyle, $fontWeightStyles.medium] as StyleProp<TextStyle>,
+  c5: [$baseStyle, $sizeStyles.sm, $fontWeightStyles.regular] as StyleProp<TextStyle>,
 
-  formHelper: [$baseStyle, $sizeStyles.sm, $fontWeightStyles.normal] as StyleProp<TextStyle>,
+  c6: [$baseStyle, $sizeStyles.sm, $fontWeightStyles.medium] as StyleProp<TextStyle>,
+
+  c7: [$baseStyle, $sizeStyles.sm, $fontWeightStyles.regular] as StyleProp<TextStyle>,
 }
 
 const $rtlStyle: TextStyle = isRTL ? { writingDirection: "rtl" } : {}

@@ -16,9 +16,19 @@ export const customFontsToLoad = {
   spaceGroteskMedium,
   spaceGroteskSemiBold,
   spaceGroteskBold,
+  pretendardBold: require("../../assets/fonts/Pretendard-Bold.otf"),
+  pretendardSemiBold: require("../../assets/fonts/Pretendard-SemiBold.otf"),
+  pretendardMedium: require("../../assets/fonts/Pretendard-Medium.otf"),
+  pretendardRegular: require("../../assets/fonts/Pretendard-Regular.otf"),
 }
 
 const fonts = {
+  pretendard: {
+    bold: "pretendardBold",
+    semiBold: "pretendardSemiBold",
+    medium: "pretendardMedium",
+    regular: "pretendardRegular",
+  },
   spaceGrotesk: {
     // Cross-platform Google font.
     light: "spaceGroteskLight",
@@ -59,7 +69,7 @@ export const typography = {
   /**
    * The primary font. Used in most places.
    */
-  primary: fonts.spaceGrotesk,
+  primary: fonts.pretendard,
   /**
    * An alternate font used for perhaps titles and stuff.
    */

@@ -1,6 +1,28 @@
 // TODO: write documentation for colors and palette in own markdown file and add links from here
 
 const palette = {
+  border_default: "#E1E1E8",
+  border_pressed: "#2B2D36",
+  border_disabled: "#F0F0F5",
+
+  primary_light: "#FF8059",
+  primary: "#FF5520",
+  primary_dark: "#FF3D00",
+
+  sign_cto: "#222222",
+  sign_brand: "#FF3D22",
+  sign_sub: "#909090",
+  sign_caption: "#C0C0C0",
+  sign_white: "#FFFFFF",
+
+  warning_light: "#FBBEB7",
+  warning: "#F16657",
+  warning_dark: "#E94735",
+
+  success_cto: "#5089EF",
+  success_text: "#0068FE",
+
+  // lagacy
   neutral100: "#FFFFFF",
   neutral200: "#F4F2F1",
   neutral300: "#D7CEC9",
@@ -51,11 +73,11 @@ export const colors = {
   /**
    * The default text color in many components.
    */
-  text: palette.neutral800,
+  text: palette.sign_cto,
   /**
    * Secondary text information.
    */
-  textDim: palette.neutral600,
+  textDim: palette.sign_sub,
   /**
    * The default color of the screen background.
    */
@@ -63,11 +85,11 @@ export const colors = {
   /**
    * The default border color.
    */
-  border: palette.neutral400,
+  border: palette.border_default,
   /**
    * The main tinting color.
    */
-  tint: palette.primary500,
+  tint: palette.primary,
   /**
    * A subtle color used for lines.
    */
@@ -75,7 +97,7 @@ export const colors = {
   /**
    * Error messages.
    */
-  error: palette.angry500,
+  error: palette.warning,
   /**
    * Error Background.
    *

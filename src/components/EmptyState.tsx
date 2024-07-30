@@ -188,7 +188,7 @@ export function EmptyState(props: EmptyStateProps) {
 
       {isHeadingPresent && (
         <Text
-          preset="subheading"
+          preset="c2"
           text={heading}
           tx={headingTx}
           txOptions={headingTxOptions}

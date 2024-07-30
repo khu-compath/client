@@ -39,9 +39,9 @@ export default observer(function WelcomeScreen() {
           testID="welcome-heading"
           style={$welcomeHeading}
           tx="welcomeScreen.readyForLaunch"
-          preset="heading"
+          preset="c1"
         />
-        <Text tx="welcomeScreen.exciting" preset="subheading" />
+        <Text tx="welcomeScreen.exciting" preset="c2" />
         <Image style={$welcomeFace} source={welcomeFace} resizeMode="contain" />
       </View>
 
