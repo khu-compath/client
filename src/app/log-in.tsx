@@ -6,6 +6,7 @@ import { Button, Icon, Screen, Text, TextField, TextFieldAccessoryProps } from "
 import { useStores } from "src/models"
 import { colors, spacing } from "src/theme"
 import * as AppleAuthentication from "expo-apple-authentication"
+import * as KakaoAuthentication from "@react-native-kakao/user"
 
 export default observer(function Login(_props) {
   const authPasswordInput = useRef<TextInput>(null)
@@ -77,6 +78,10 @@ export default observer(function Login(_props) {
         console.error(e)
       }
     }
+  }
+
+  function kakaoLogin() {
+    KakaoAuthentication.login()
   }
 
   const PasswordRightAccessory: ComponentType<TextFieldAccessoryProps> = useMemo(
@@ -152,6 +157,8 @@ export default observer(function Login(_props) {
           onPress={appleLogin}
         />
       </View>
+
+      <Button text="카카오 로그인" onPress={kakaoLogin} />
     </Screen>
   )
 })
