@@ -22,7 +22,7 @@
     ],
     "android": {
       "icon": "./assets/images/app-icon-android-legacy.png",
-      "package": "com.compath",
+      "package": "xyz.compath.compath",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/app-icon-android-adaptive-foreground.png",
         "backgroundImage": "./assets/images/app-icon-android-adaptive-background.png"
@@ -36,13 +36,14 @@
     "ios": {
       "icon": "./assets/images/app-icon-ios.png",
       "supportsTablet": true,
-      "bundleIdentifier": "com.compath",
+      "bundleIdentifier": "xyz.compath.compath",
       "splash": {
         "image": "./assets/images/splash-logo-ios-mobile.png",
         "tabletImage": "./assets/images/splash-logo-ios-tablet.png",
         "resizeMode": "contain",
         "backgroundColor": "#191015"
-      }
+      },
+      "useAppleSignIn": true
     },
     "web": {
       "favicon": "./assets/images/app-icon-web-favicon.png",
@@ -70,18 +71,46 @@
         "expo-font",
         {
           "fonts": [
-              "assets/fonts/Pretendard-Bold.ttf",
-              "assets/fonts/Pretendard-SemiBold.ttf",
-              "assets/fonts/Pretendard-Medium.ttf",
-              "assets/fonts/Pretendard-Regular.ttf"
+              "assets/fonts/Pretendard-Bold.otf",
+              "assets/fonts/Pretendard-SemiBold.otf",
+              "assets/fonts/Pretendard-Medium.otf",
+              "assets/fonts/Pretendard-Regular.otf"
             ]
         }
       ],
-      "expo-router"
+      "expo-router",
+      "expo-apple-authentication",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "extraMavenRepos": [
+              "https://devrepo.kakao.com/nexus/content/groups/public/"
+            ]
+          }
+        }
+      ],
+      [
+        "@react-native-kakao/core",
+        {
+          "nativeAppKey": "d7feed17c61f53bfadca7ee38b4f0bb8",
+          "android": {
+            "authCodeHandlerActivity": true
+          },
+          "ios": {
+            "handleKakaoOpenUrl": true
+          }
+        }
+      ]
     ],
     "experiments": {
       "tsconfigPaths": true,
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "80f66355-ebf1-430d-8602-709b74f6891e"
+      }
     }
   },
   "ignite": {
