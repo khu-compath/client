@@ -6,6 +6,7 @@
     "development": {
       "extends": "production",
       "distribution": "internal",
+      "developmentClient": true,
       "android": {
         "gradleCommand": ":app:assembleDebug"
       },
