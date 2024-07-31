@@ -95,7 +95,7 @@ export interface ButtonProps extends PressableProps {
  *   onPress={handleButtonPress}
  * />
  */
-export function Button(props: ButtonProps) {
+export function Button(props: ButtonProps): React.ReactElement {
   const {
     tx,
     text,
@@ -187,6 +187,7 @@ const $baseTextStyle: TextStyle = {
   fontSize: 16,
   lineHeight: 20,
   fontFamily: typography.primary.medium,
+  color: colors.palette.sign_white,
   textAlign: "center",
   flexShrink: 1,
   flexGrow: 0,
@@ -199,11 +200,7 @@ const $leftAccessoryStyle: ViewStyle = { marginEnd: spacing.xs, zIndex: 1 }
 const $viewPresets = {
   default: [
     $baseViewStyle,
-    {
-      borderWidth: 1,
-      borderColor: colors.palette.neutral400,
-      backgroundColor: colors.palette.neutral100,
-    },
+    { backgroundColor: colors.palette.primary_dark },
   ] as StyleProp<ViewStyle>,
 
   filled: [$baseViewStyle, { backgroundColor: colors.palette.neutral300 }] as StyleProp<ViewStyle>,
@@ -221,7 +218,7 @@ const $textPresets: Record<Presets, StyleProp<TextStyle>> = {
 }
 
 const $pressedViewPresets: Record<Presets, StyleProp<ViewStyle>> = {
-  default: { backgroundColor: colors.palette.neutral200 },
+  default: { backgroundColor: colors.palette.primary_light },
   filled: { backgroundColor: colors.palette.neutral400 },
   reversed: { backgroundColor: colors.palette.neutral700 },
 }

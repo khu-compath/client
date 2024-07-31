@@ -89,7 +89,7 @@ type ScreenPreset = "fixed" | "scroll" | "auto"
  * @param {ScreenPreset?} preset - The preset to check.
  * @returns {boolean} - Whether the preset is non-scrolling.
  */
-function isNonScrolling(preset?: ScreenPreset) {
+function isNonScrolling(preset?: ScreenPreset): boolean {
   return !preset || preset === "fixed"
 }
 
@@ -163,7 +163,7 @@ function useAutoPreset(props: AutoScreenProps): {
  * @param {ScreenProps} props - The props for the `ScreenWithoutScrolling` component.
  * @returns {JSX.Element} - The rendered `ScreenWithoutScrolling` component.
  */
-function ScreenWithoutScrolling(props: ScreenProps) {
+function ScreenWithoutScrolling(props: ScreenProps): React.ReactElement {
   const { style, contentContainerStyle, children } = props
   return (
     <View style={[$outerStyle, style]}>
@@ -176,7 +176,7 @@ function ScreenWithoutScrolling(props: ScreenProps) {
  * @param {ScreenProps} props - The props for the `ScreenWithScrolling` component.
  * @returns {JSX.Element} - The rendered `ScreenWithScrolling` component.
  */
-function ScreenWithScrolling(props: ScreenProps) {
+function ScreenWithScrolling(props: ScreenProps): React.ReactElement {
   const {
     children,
     keyboardShouldPersistTaps = "handled",
@@ -225,7 +225,7 @@ function ScreenWithScrolling(props: ScreenProps) {
  * @param {ScreenProps} props - The props for the `Screen` component.
  * @returns {JSX.Element} The rendered `Screen` component.
  */
-export function Screen(props: ScreenProps) {
+export function Screen(props: ScreenProps): React.ReactElement {
   const {
     backgroundColor = colors.background,
     KeyboardAvoidingViewProps,

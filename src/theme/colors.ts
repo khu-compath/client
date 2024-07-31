@@ -89,7 +89,7 @@ export const colors = {
   /**
    * The main tinting color.
    */
-  tint: palette.primary,
+  tint: palette.primary_dark,
   /**
    * A subtle color used for lines.
    */
