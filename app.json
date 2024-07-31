@@ -42,7 +42,8 @@
         "tabletImage": "./assets/images/splash-logo-ios-tablet.png",
         "resizeMode": "contain",
         "backgroundColor": "#191015"
-      }
+      },
+      "useAppleSignIn": true
     },
     "web": {
       "favicon": "./assets/images/app-icon-web-favicon.png",
@@ -77,7 +78,8 @@
             ]
         }
       ],
-      "expo-router"
+      "expo-router",
+      "expo-apple-authentication"
     ],
     "experiments": {
       "tsconfigPaths": true,
